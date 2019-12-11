@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 12/8/2019 5:09:18 PM -->
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_COLONY_OVERVIEW">
+			<Text>Colony Overview</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COLONY_NOT_STARTED_YET">
+			<Text>You need Compass to establish colonies</Text>
+		</Row>
+		<Row Tag="TXT_KEY_YOUR_COLONIES">
+			<Text>YOUR COLONIES</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COLONY_DETAILS">
+			<Text>COLONY DETAILS</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NO_COLONIES">
+			<Text>You have no colonies.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUM_OUR_COLONIES">
+			<Text>Number of Colonies we own: {1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUM_WORLD_COLONIES">
+			<Text>Number of Colonies in the World: {1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_COLONY_GENERAL_MANAGEMENT">
+			<Text>GENERAL MANAGEMENT</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TURNS_ACQUIRED">
+			<Text>Colony For {1_NumTurns} Turns (Turn {2_TurnStarted})</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

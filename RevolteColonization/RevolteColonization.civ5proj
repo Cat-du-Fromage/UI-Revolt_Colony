@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Deploy" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <ProjectGuid>{900f9b9d-93c1-4047-93d8-76c5e74a94e0}</ProjectGuid>
+    <Name>RevoltColonization</Name>
+    <Guid>d5e6aa4e-a6b9-4c28-ba62-81458bbb4c51</Guid>
+    <ModVersion>1</ModVersion>
+    <Stability>Alpha</Stability>
+    <Teaser>ColonyRevolt!</Teaser>
+    <Description>ColonyRevolt!</Description>
+    <Authors>Florian</Authors>
+    <SpecialThanks>
+    </SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <SupportsMac>true</SupportsMac>
+    <AssemblyName>RevolteColonization</AssemblyName>
+    <RootNamespace>RevolteColonization</RootNamespace>
+    <ModReferences />
+    <ModDependencies>
+      <Association xmlns="">
+        <Type>Mod</Type>
+        <Name>Colonization Mod</Name>
+        <Id>78566333-5214-434f-801d-4168386c2475</Id>
+        <MinVersion>0</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModDependencies>
+    <ModContent>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>ColonyOverview</Name>
+        <Description />
+        <FileName>ColonyOverview.xml</FileName>
+      </Content>
+    </ModContent>
+    <ModActions>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>ColonyOverview.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>ColonyText.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>TesteFacility.sql</FileName>
+      </Action>
+    </ModActions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Package Only' ">
+    <PackageMod>true</PackageMod>
+    <DeployMod>false</DeployMod>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Deploy Only' ">
+    <PackageMod>false</PackageMod>
+    <DeployMod>true</DeployMod>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ColonyOverview.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="ColonyOverview.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="ColonyText.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="TesteFacility.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
+</Project>

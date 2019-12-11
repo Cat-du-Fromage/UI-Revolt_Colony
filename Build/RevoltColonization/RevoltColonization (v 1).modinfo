@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="d5e6aa4e-a6b9-4c28-ba62-81458bbb4c51" version="1">
+  <Properties>
+    <Name>RevoltColonization</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>ColonyRevolt!</Teaser>
+    <Description>ColonyRevolt!</Description>
+    <Authors>Florian</Authors>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies>
+    <Mod id="78566333-5214-434f-801d-4168386c2475" minversion="0" maxversion="999" title="Colonization Mod" />
+  </Dependencies>
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="99D83EE23601B4EA595314ED0725F71C" import="0">ColonyOverview.lua</File>
+    <File md5="41A2DE0CB222EC808BC911FF900F7282" import="0">ColonyOverview.xml</File>
+    <File md5="DCD173E83CB1E2AB86EC2964A27C0923" import="0">ColonyText.xml</File>
+    <File md5="315A01A197B3BF1059F805495B89CE1B" import="0">TesteFacility.sql</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>ColonyOverview.xml</UpdateDatabase>
+      <UpdateDatabase>ColonyText.xml</UpdateDatabase>
+      <UpdateDatabase>TesteFacility.sql</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="ColonyOverview.xml">
+      <Name>ColonyOverview</Name>
+      <Description>
+      </Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>
